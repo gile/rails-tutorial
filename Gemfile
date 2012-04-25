@@ -17,6 +17,11 @@ group :assets do
   gem 'uglifier', '>= 1.2.3'
 end
 
+group :development, :test do
+  gem 'rspec-rails',      ">= 2.0.0.beta"
+end
+
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
+

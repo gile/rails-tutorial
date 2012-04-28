@@ -4,6 +4,7 @@ gem 'rails', '3.2.3'
 gem 'thin'
 gem 'foreman'
 gem 'json'
+gem 'dalli' # memcached
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

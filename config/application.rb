@@ -55,5 +55,8 @@ module FirstApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # use the Dalli client for its cache-store (memcached)
+    config.cache_store = :dalli_store
   end
 end

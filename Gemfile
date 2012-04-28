@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'thin'
 gem 'foreman'
+gem 'json'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,4 +28,4 @@ end
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
-
+gem 'rb-readline'

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'thin'
+gem 'foreman'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,7 +20,8 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'rspec-rails',      "> 2.0.0.beta.18"
+  #gem 'rspec-rails', '2.0.0.beta.18'
 end
 
 gem 'jquery-rails'

@@ -20,6 +20,9 @@ test:
   database: test
   pool: 5
   timeout: 5000
+  username: 'sangil'
+  password: '3050'
+  encoding: utf8
 
 production:
   adapter: sqlite3

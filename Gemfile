@@ -26,6 +26,8 @@ group :development, :test do
   gem 'rspec-rails',      "> 2.0.0.beta.18"
   #gem 'rspec-rails', '2.0.0.beta.18'
   gem 'capybara'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
 end
 
 gem 'jquery-rails'

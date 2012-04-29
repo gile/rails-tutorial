@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Static pages" do
   include Capybara::DSL
-
+  @base_title = "Sangil"
   describe "Home page" do
 
     it "should have the content 'Sample App'" do
@@ -12,7 +12,12 @@ describe "Static pages" do
     
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => "| Home")
+      page.should have_selector('title', :text => @base_title)
+    end
+    
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      page.should_not have_selector('title', :text => '| Home')
     end
   end
 
@@ -25,7 +30,7 @@ describe "Static pages" do
     
     it "should have the title 'Help'" do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => "| Help")
+      page.should have_selector('title', :text => "#{@base_title} | Help")
     end
   end
   
@@ -38,7 +43,7 @@ describe "Static pages" do
     
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
-      page.should have_selector('title', :text => "| About")
+      page.should have_selector('title', :text => "#{@base_title} | About")
     end
   end
   
@@ -51,7 +56,7 @@ describe "Static pages" do
     
     it "should have the title 'Contact Us'" do
       visit '/static_pages/contact'
-      page.should have_selector('title', :text => "| Contact")
+      page.should have_selector('title', :text => "#{@base_title} | Contact")
     end
   end
 end

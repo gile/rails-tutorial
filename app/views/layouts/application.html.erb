@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-  	Sangil | <%= yield(:title) %>
-  </title>
+  <!-- giving :title directly as param will just send the string 'title'-->
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
